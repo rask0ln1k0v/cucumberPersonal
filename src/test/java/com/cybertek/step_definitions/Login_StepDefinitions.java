@@ -13,6 +13,8 @@ public class Login_StepDefinitions {
     @When("user enters librarian username")
     public void user_enters_librarian_username() {
         System.out.println("User enters librarian username");
+
+        //Assert.fail("INTENTIONAL FAILING. DELETE THIS LATER");
     }
     @When("user enters librarian password")
     public void user_enters_librarian_password() {
