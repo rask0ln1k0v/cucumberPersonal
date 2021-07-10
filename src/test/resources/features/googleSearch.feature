@@ -3,7 +3,7 @@ Feature: Google search functionality
   I should be able to search whatever I want, and see relevant information
 
   Scenario: Search page title verification
-    Given User is on Google home page
+    And User is on Google home page
     Then  User should see title is Google
 
   Scenario: User search title verification
