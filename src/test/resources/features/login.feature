@@ -5,6 +5,7 @@ Feature: Library app login feature
 
     #THIS IS HOW WE COMMENT IN FEATURE FILE
 
+  @wip
   Scenario: Login as librarian
     Given user is on the login page
     When user enters librarian username
