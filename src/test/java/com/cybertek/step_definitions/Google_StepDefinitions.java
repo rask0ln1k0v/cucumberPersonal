@@ -24,6 +24,8 @@ public class Google_StepDefinitions {
         Driver.getDriver().get("https://www.google.com");
 
     }
+
+
     @When("User searches for apple")
     public void user_searches_for_apple() {
 
