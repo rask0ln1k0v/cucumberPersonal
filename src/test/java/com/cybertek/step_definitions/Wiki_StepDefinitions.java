@@ -48,4 +48,11 @@ public class Wiki_StepDefinitions {
         Assert.assertEquals(expectedTitle, actualTitle);
 
     }
+
+    @Then("User sees {string} is in the main header")
+    public void userSeesIsInTheMainHeader(String arg0) {
+
+
+
+    }
 }
