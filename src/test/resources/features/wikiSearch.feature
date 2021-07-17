@@ -28,9 +28,9 @@ Feature: Wikipedia search functionality
       | searchValue      | expectedMainHeader | expectedTitle    |
       | Steve Jobs       | Steve Jobs         | Steve Jobs       |
       | Albert Einstein  | Albert Einstein    | Albert Einstein  |
-      | Nicola Tesla     | Nicola Tesla       | Nicola Tesla     |
+      | Nikola Tesla     | Nikola Tesla       | Nikola Tesla     |
       | Conor McGregor   | Conor McGregor     | Conor McGregor   |
       | Chuck Norris     | Chuck Norris       | Chuck Norris     |
       | Marie Curie      | Marie Curie        | Marie Curie      |
       | Natalie Dormer   | Natalie Dormer     | Natalie Dormer   |
-      | Ibrahim Tatlises | Ibrahim Tatlises   | Ibrahim Tatlises |
+#      | Ibrahim Tatlises | Ibrahim Tatlises   | Ibrahim Tatlises |
