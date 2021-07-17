@@ -46,8 +46,8 @@ public class Etsy_StepDefinitions {
 
         Assert.assertEquals("Title is not as expected!", actualTitle, expectedTitle);
 
-
     }
+
 
 
 }
