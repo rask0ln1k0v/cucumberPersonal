@@ -10,17 +10,17 @@ public class Hooks {
     //Import from io.cucumber.java not from junit
     @Before (value = "@login", order = 1)
     public void setupLoginScenario(){
-        System.out.println("--Setting up browser with further details...");
+        System.out.println("BEFORE--Setting up browser with further details...");
     }
 
     @Before ("@db")
     public void setupScenario(){
-        System.out.println("--Setting up browser with further details...");
+        System.out.println("BEFORE--Setting up browser with further details...");
     }
 
     @After
     public void tearDownScenario(){
-        System.out.println("--Teardown steps are being applied...");
+        System.out.println("AFTER--Teardown steps are being applied...");
         //Driver.closeDriver();
     }
 
