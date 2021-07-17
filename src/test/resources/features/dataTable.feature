@@ -1,5 +1,6 @@
 Feature: Examples of Cucumber data table implementations
 
+  @wip
   Scenario: Something happens
     #Given user does something
     Then user should see below words displayed
@@ -10,6 +11,7 @@ Feature: Examples of Cucumber data table implementations
       | Mango      |
       | Tomato     |
       | Cucumber   |
+
 
     # To fix pipes' order
       #MAC: command + option + L
