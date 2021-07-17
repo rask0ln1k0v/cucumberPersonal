@@ -9,7 +9,6 @@ Feature: Etsy search feature
 
     #expected: Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone
 
-  @wip
   Scenario: Etsy Search Functionality Title Verification
     Given user is on the Etsy landing page
     When user types Wooden Spoon in the search bar
