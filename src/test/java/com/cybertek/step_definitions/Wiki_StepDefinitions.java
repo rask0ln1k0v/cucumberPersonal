@@ -36,9 +36,16 @@ public class Wiki_StepDefinitions {
 
     @When("User types {string} in the wiki search box")
     public void userTypesInTheWikiSearchBox(String arg0) {
+        wikiSearchPage.searchBox.sendKeys(arg0);
     }
 
     @Then("User sees {string} is in the wiki title")
     public void userSeesIsInTheWikiTitle(String arg0) {
+
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedTitle = arg0+" - Wikipedia";
+
+        Assert.assertEquals(expectedTitle, actualTitle);
+
     }
 }
