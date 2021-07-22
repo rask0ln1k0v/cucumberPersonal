@@ -19,3 +19,12 @@ Feature: Examples of Cucumber data table implementations
       | username | librarian13@library |
       | password | 9rf6axdD            |
     Then user should see title is something
+
+
+
+
+
+
+
+
+
