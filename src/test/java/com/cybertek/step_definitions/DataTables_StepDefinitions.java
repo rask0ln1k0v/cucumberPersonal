@@ -1,5 +1,6 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.LibraryLoginPage;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -10,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 public class DataTables_StepDefinitions {
+
+    LibraryLoginPage loginPage = new LibraryLoginPage();
 
     @Given("user is on the login page of library app")
     public void user_is_on_the_login_page_of_library_app() {
@@ -22,8 +25,13 @@ public class DataTables_StepDefinitions {
     @When("user enters username and password as below")
     public void user_enters_username_and_password_as_below(Map<String, String> loginInfo) {
 
-        System.out.println("loginInfo.get('username') = " + loginInfo.get("username"));
-        System.out.println("loginInfo.get('password') = " + loginInfo.get("password"));
+        String username = loginInfo.get("username");
+        //String password = loginInfo.get("password");
+
+        loginPage.emailInput.sendKeys(username);
+        loginPage.passwordInput.sendKeys(loginInfo.get("password"));
+
+        loginPage.signIn.click();
 
     }
     @Then("user should see title is something")
