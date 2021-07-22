@@ -18,7 +18,8 @@ Feature: Examples of Cucumber data table implementations
     When user enters username and password as below
       | username | librarian13@library |
       | password | 9rf6axdD            |
-    Then user should see title is something
+
+    Then user should see title is Library
 
 
 

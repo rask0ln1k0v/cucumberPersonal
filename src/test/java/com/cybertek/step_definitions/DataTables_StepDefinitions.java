@@ -34,9 +34,12 @@ public class DataTables_StepDefinitions {
         loginPage.signIn.click();
 
     }
-    @Then("user should see title is something")
+    @Then("user should see title is Library")
     public void user_should_see_title_is_something() {
-        System.out.println("title verification");
+
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedTitle = "Library";
+
     }
 
 
@@ -46,8 +49,8 @@ public class DataTables_StepDefinitions {
         System.out.println("listOfFruits.size() = " + listOfFruits.size());
         System.out.println("listOfFruits = " + listOfFruits);
 
-
     }
+
 
 
 }
