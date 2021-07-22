@@ -1,5 +1,7 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.utilities.ConfigurationReader;
+import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,7 +13,10 @@ public class DataTables_StepDefinitions {
 
     @Given("user is on the login page of library app")
     public void user_is_on_the_login_page_of_library_app() {
-        System.out.println("User is on the login page!");
+
+        String url = ConfigurationReader.getProperty("libraryUrl");
+        Driver.getDriver().get(url);
+
     }
 
     @When("user enters username and password as below")
