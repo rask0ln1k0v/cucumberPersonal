@@ -3,7 +3,6 @@ Feature: Wikipedia search functionality
   Case: Search for "Steve Jobs", the title, the header, and the image header
   should be displayed as "Steve Jobs"
 
-
   Scenario: Wikipedia Search Functionality Title Verification
     Given User is on Wikipedia home page
     When User types "Steve Jobs" in the wiki search box
