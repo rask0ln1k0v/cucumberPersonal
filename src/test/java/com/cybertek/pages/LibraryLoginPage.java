@@ -39,9 +39,21 @@ public class LibraryLoginPage {
         signIn.click();
     }
 
+    /*
+    Login method controlled from configuration.properties
+     */
     public void loginWithConfig(){
         emailInput.sendKeys(ConfigurationReader.getProperty("username"));
         passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        signIn.click();
+    }
+
+    /*
+    This method accepts arguments directly from the method
+     */
+    public void login(String username, String password){
+        emailInput.sendKeys(username);
+        passwordInput.sendKeys(password);
         signIn.click();
     }
 
