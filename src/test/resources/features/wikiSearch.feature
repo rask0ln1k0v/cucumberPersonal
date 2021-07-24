@@ -19,7 +19,7 @@ Feature: Wikipedia search functionality
   Scenario Outline: Wikipedia Search Functionality Header Verification
     Given User is on Wikipedia home page
     When User types "<searchValue>" in the wiki search box
-    And User clicks wiki search button
+    And User clicks wiki search
     Then User sees "<expectedMainHeader>" is in the main header
     Then User sees "<expectedTitle>" is in the wiki title
 
@@ -33,3 +33,5 @@ Feature: Wikipedia search functionality
       | Marie Curie      | Marie Curie        | Marie Curie      |
       | Natalie Dormer   | Natalie Dormer     | Natalie Dormer   |
 #      | Ibrahim Tatlises | Ibrahim Tatlises   | Ibrahim Tatlises |
+
+

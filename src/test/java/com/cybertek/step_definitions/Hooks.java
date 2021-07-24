@@ -24,6 +24,7 @@ public class Hooks {
         //IF MY SCENARIO FAILS
             // TAKE A SCREENSHOT
 
+
         //scenario.isFailed() --> if scenario fails : returns true
 
         if (scenario.isFailed()){
