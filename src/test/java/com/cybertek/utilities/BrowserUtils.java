@@ -1,6 +1,35 @@
 package com.cybertek.utilities;
 
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BrowserUtils {
+
+    /**
+        This method accepts a List<WebElements> and returns List<String>
+        @param webElementList
+     */
+    public static List<String> getElementsText(List<WebElement> webElementList){
+
+        //Create placeholder List<String>
+        List<String> actualAsString = new ArrayList<>();
+
+        for (WebElement each : webElementList) {
+
+            actualAsString.add(each.getText());
+
+        }
+
+        return actualAsString;
+
+    }
+
+
+
+
+
 
     /*
     Method that will accept int  arg
@@ -15,7 +44,6 @@ public class BrowserUtils {
 
         BrowserUtils.sleep(1); --> 1 second
      */
-
     public static void sleep(int second) {
 
         second*=1000;
