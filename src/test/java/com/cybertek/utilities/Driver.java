@@ -13,7 +13,8 @@ public class Driver {
     Creating the private constructor so this class' object
     is not reachable from outside
      */
-    private Driver(){}
+    private Driver() {
+    }
 
     /*
     Making our 'driver' instance private so that it is not reachable from outside of the class.
@@ -24,33 +25,35 @@ public class Driver {
     /*
     Creating re-usable utility method that will return same 'driver' instance everytime we call it.
      */
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
 
-        if (driverPool.get() == null){
+        if (driverPool.get() == null) {
 
+            synchronized (Driver.class) {
             /*
             We read our browser type from configuration.properties file using
             .getProperty method we creating in ConfigurationReader class.
              */
-            String browserType = ConfigurationReader.getProperty("browser");
+                String browserType = ConfigurationReader.getProperty("browser");
 
             /*
             Depending on the browser type our switch statement will determine
             to open specific type of browser/driver
              */
-            switch (browserType){
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
-                    driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                    break;
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    driverPool.set(new FirefoxDriver());
-                    driverPool.get().manage().window().maximize();
-                    driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                    break;
+                switch (browserType) {
+                    case "chrome":
+                        WebDriverManager.chromedriver().setup();
+                        driverPool.set(new ChromeDriver());
+                        driverPool.get().manage().window().maximize();
+                        driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                        break;
+                    case "firefox":
+                        WebDriverManager.firefoxdriver().setup();
+                        driverPool.set(new FirefoxDriver());
+                        driverPool.get().manage().window().maximize();
+                        driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                        break;
+                }
             }
         }
 
@@ -66,8 +69,8 @@ public class Driver {
     This method makes sure we have some form of driver sesion or driver id has.
     Either null or not null it must exist.
      */
-    public static void closeDriver(){
-        if(driverPool.get()!=null){
+    public static void closeDriver() {
+        if (driverPool.get() != null) {
             driverPool.get().quit();
             driverPool.remove();
         }
