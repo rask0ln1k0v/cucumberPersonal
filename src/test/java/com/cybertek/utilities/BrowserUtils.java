@@ -21,6 +21,9 @@ public class BrowserUtils {
      */
     public static void assertTitle(String expectedTitle){
 
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+        wait.until(ExpectedConditions.titleIs(expectedTitle));
+
         String actualTitle = Driver.getDriver().getTitle();
 
         Assert.assertEquals(expectedTitle, actualTitle);
