@@ -36,6 +36,10 @@ public class ExcelWrite {
         //king's cell
         cell = row.getCell(1);
 
+        //Create and store adamsCell
+        XSSFCell adamsCell = sheet.getRow(2).getCell(0);
+
+        System.out.println("Before: " + adamsCell);
 
 
     }
