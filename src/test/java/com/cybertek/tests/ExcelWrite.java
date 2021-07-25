@@ -45,7 +45,14 @@ public class ExcelWrite {
         //This method will override existing cell
         adamsCell.setCellValue("Madam");
 
+        System.out.println("After: " + adamsCell);
 
+
+
+
+
+
+        //=================================================================
         //Use fileOutputStream to push changes -> load the file to fileOutputStream
         FileOutputStream fileOutputStream = new FileOutputStream(path);
 
