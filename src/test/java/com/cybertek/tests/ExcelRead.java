@@ -49,8 +49,17 @@ public class ExcelRead {
         //Starts counting from 0
         int lastUsedRow = sheet.getLastRowNum();
 
+        //TODO: 1- CREATE A LOGIC TO PRINT OUT NEENA'S NAME DYNAMICALLY
 
+        for (int rowNum = 0; rowNum < usedRows; rowNum++) {
 
+            if (sheet.getRow(rowNum).getCell(0).equals("Neena")){
+
+                System.out.println("Neena's name = " + sheet.getRow(rowNum).getCell(0));
+
+            }
+
+        }
 
     }
 
