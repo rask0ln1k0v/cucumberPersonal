@@ -44,6 +44,13 @@ public class ExcelRead {
         int usedRows = sheet.getPhysicalNumberOfRows();
 
 
+        //Returns the number from the top cell to bottom cell
+        //It does not care if there are empty cells or not
+        //Starts counting from 0
+        int lastUsedRow = sheet.getLastRowNum();
+
+
+
 
     }
 
