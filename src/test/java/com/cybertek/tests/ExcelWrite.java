@@ -43,10 +43,19 @@ public class ExcelWrite {
         System.out.println("Before: " + adamsCell);
 
         //This method will override existing cell
-        adamsCell.setCellValue("Madam");
+        adamsCell.setCellValue("Adam");
 
         System.out.println("After: " + adamsCell);
 
+        //TODO: CHANGE STEVEN'S NAME TO TOM
+
+        for (int rowNum = 0; rowNum < sheet.getLastRowNum(); rowNum++) {
+
+            if (sheet.getRow(rowNum).getCell(0).toString().equals("Steven")){
+                sheet.getRow(rowNum).getCell(0).setCellValue("Tom");
+            }
+
+        }
 
 
 
