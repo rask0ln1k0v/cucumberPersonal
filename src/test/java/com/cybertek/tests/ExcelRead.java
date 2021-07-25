@@ -31,7 +31,7 @@ public class ExcelRead {
         //3- Select row and cell
         //Print out Steven's cell
         //Indexes start from 0
-        sheet.getRow(1).getCell(0);
+        System.out.println("sheet.getRow(1).getCell(0) = " + sheet.getRow(1).getCell(0));
 
 
     }
