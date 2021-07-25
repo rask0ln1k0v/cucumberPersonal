@@ -34,6 +34,9 @@ public class ExcelRead {
         System.out.println("sheet.getRow(1).getCell(0) = " + sheet.getRow(1).getCell(0));
 
 
+        //Print out "Singer" from the sheet
+        System.out.println("sheet.getRow(3).getCell(2) = " + sheet.getRow(3).getCell(2));
+
     }
 
 
