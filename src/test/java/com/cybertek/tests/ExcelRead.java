@@ -28,6 +28,12 @@ public class ExcelRead {
         //2- We need to get the specific sheet from currently opened workbook
         XSSFSheet sheet = workbook.getSheet("Employees");
 
+        //3- Select row and cell
+        //Print out Steven's cell
+        //Indexes start from 0
+        sheet.getRow(1).getCell(0);
+
+
     }
 
 
