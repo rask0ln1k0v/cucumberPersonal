@@ -53,9 +53,9 @@ public class ExcelRead {
 
         for (int rowNum = 0; rowNum < usedRows; rowNum++) {
 
-            if (sheet.getRow(rowNum).getCell(0).equals("Neena")){
+            if (sheet.getRow(rowNum).getCell(0).toString().equals("Neena")){
 
-                System.out.println("Neena's name = " + sheet.getRow(rowNum).getCell(0));
+                System.out.println("Current cell = " + sheet.getRow(rowNum).getCell(0));
 
             }
 
