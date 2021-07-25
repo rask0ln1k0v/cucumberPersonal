@@ -1,5 +1,6 @@
 package com.cybertek.tests;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 
@@ -24,8 +25,8 @@ public class ExcelRead {
         //1- Create a workbook
         XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
 
-
-
+        //2- We need to get the specific sheet from currently opened workbook
+        XSSFSheet sheet = workbook.getSheet("Employees");
 
     }
 
