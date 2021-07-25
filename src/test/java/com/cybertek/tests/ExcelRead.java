@@ -37,6 +37,14 @@ public class ExcelRead {
         //Print out "Singer" from the sheet
         System.out.println("sheet.getRow(3).getCell(2) = " + sheet.getRow(3).getCell(2));
 
+        //Return the count of used cells only
+        //If there are cells not used, they will not be counted
+        //It will not count empty rows or cells
+        //Starts counting from 1
+        int usedRows = sheet.getPhysicalNumberOfRows();
+
+
+
     }
 
 
