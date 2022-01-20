@@ -1,6 +1,8 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.BasePage;
 import com.cybertek.pages.LyftHomePage;
+import com.cybertek.pages.VyTrack_LoginPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
@@ -8,6 +10,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.jsoup.Connection;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import static org.junit.Assert.*;
@@ -42,6 +45,10 @@ public class Lyft_FareEstimateStepDefs {
         lyftHomePage.getPriceBtn.click();
         BrowserUtils.sleep(1);
         lyftHomePage.getPriceBtn.click();
+
+
+
+
 
     }
 

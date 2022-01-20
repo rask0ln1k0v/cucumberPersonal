@@ -291,5 +291,10 @@ public class BrowserUtils {
 
         }
 
+
+    }
+    public static void scrollDown(int pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0, "+ pixels +")");
     }
 }

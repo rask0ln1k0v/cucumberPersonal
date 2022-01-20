@@ -6,6 +6,9 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -16,6 +19,7 @@ public class ExcelRead {
     public void readingFromExcel() throws IOException {
     //Open excel workbook using XSSFWorkbook class
     //pass file name in the constructor
+        WebDriver driver = new ChromeDriver();
 
         XSSFWorkbook workbook = new XSSFWorkbook("Employees.xlsx");
 

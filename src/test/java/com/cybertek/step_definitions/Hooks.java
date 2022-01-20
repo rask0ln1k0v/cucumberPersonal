@@ -15,6 +15,7 @@ public class Hooks {
         System.out.println("BEFORE - setUp method is running before the scenario");
     }
 
+
     @After
     public void tearDownScenario(Scenario scenario) {
         /**
@@ -30,7 +31,7 @@ public class Hooks {
         }
 
         System.out.println("AFTER - tearDown method is running after the scenario:" + scenario.getName());
-        Driver.closeDriver();
+//        Driver.closeDriver();
     }
 
 //    @AfterStep
@@ -38,4 +39,5 @@ public class Hooks {
 //        byte[] image = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 //        scenario.attach(image, "image/png", scenario.getName());
 //    }
+
 }
