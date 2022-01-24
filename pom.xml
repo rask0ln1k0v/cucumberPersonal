@@ -106,11 +106,7 @@
 
               <!--  ======= I added below   -->
 
-        <dependency>
-            <groupId>com.github.bogdanlivadariu</groupId>
-            <artifactId>gif-webdriver</artifactId>
-            <version>LATEST</version>
-        </dependency>
+
 
     </dependencies>
 
