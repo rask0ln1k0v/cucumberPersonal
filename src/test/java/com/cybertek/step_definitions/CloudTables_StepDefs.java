@@ -1,6 +1,9 @@
 package com.cybertek.step_definitions;
 
+import com.cybertek.pages.BasePage;
 import com.cybertek.pages.CloudTables_HomePage;
+import com.cybertek.pages.GoogleSearchPage;
+import com.cybertek.pages.VyTrack_LoginPage;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -23,6 +26,7 @@ public class CloudTables_StepDefs {
         String expectedTitle = "Editor | Editing for DataTables";
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
+      
     }
     @When("User clicks on New button")
     public void user_clicks_on_new_button() {
