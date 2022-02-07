@@ -1,5 +1,7 @@
 package com.cybertek.step_definitions;
 
+
+import com.cybertek.utilities.DBUtils;
 import com.cybertek.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -32,6 +34,18 @@ public class Hooks {
 
         System.out.println("AFTER - tearDown method is running after the scenario:" + scenario.getName());
 //        Driver.closeDriver();
+    }
+
+    @Before("@db")
+    public void setupDB(){
+        System.out.println("Setting up database connection");
+        DBUtils.createConnection();
+    }
+
+    @After("@db")
+    public void teardownDB(){
+        System.out.println("Closing db connection");
+        DBUtils.destroy();
     }
 
 //    @AfterStep

@@ -7,6 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
+import java.sql.Connection;
+
 public class Calculator_StepDefs {
 CalculatorPage calculatorPage = new CalculatorPage();
 
